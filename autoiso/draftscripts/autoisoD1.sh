@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# This is a draft script
+
+# Install required packages
+sudo apt-get update
+sudo apt-get install -y xorriso isolinux squashfs-tools
+
+# Create a working directory
+mkdir -p ~/iso-files
+cd ~/iso-files
+
+# Download the Ubuntu minimal ISO image
+wget http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso
+
+# Mount the ISO image
+sudo mount -o loop mini.iso /mnt
+
+# Copy the contents of the ISO to a working directory
+rsync -av /mnt/ ~/iso-files/
+
+# Unmount the ISO image
+sudo umount /mnt
+
+# Remove the unnecessary files and folders
+sudo rm -rf ~/iso-files/pool/
+sudo rm -rf ~/iso-files/dists/
+sudo rm -rf ~/iso-files/preseed/
+sudo rm -rf ~/iso-files/README*
+sudo rm -rf ~/iso-files/index.*
+sudo rm -rf ~/iso-files/md5sum*
+sudo rm -rf ~/iso-files/ubuntu*
+
+
+# Add a Bash script to the ISO
+echo '#!/bin/bash
+
+FILEPATH="/path/to/file"
+if [ -f "$FILEPATH" ]; then
+    echo "File $FILEPATH exists, running."
+    bash "$FILEPATH"
+else
+    echo "File $FILEPATH doesn't exist."
+    bash
+fi
+' > ~/iso-files/custom-script.sh
+
+# Make the script executable
+sudo chmod +x ~/iso-files/custom-script.sh
+
+# Create the ISO image
+sudo mkisofs -r -V "Custom Ubuntu ISO" -cache-inodes -J -l \
+    -b isolinux/isolinux.bin \
+    -c isolinux/boot.cat \
+    -no-emul-boot \
+    -boot-load-size 4 \
+    -boot-info-table \
+    -o ~/custom-ubuntu.iso \
+    ~/iso-files/
+
+# Clean up the working directory
+sudo rm -rf ~/iso-files/
