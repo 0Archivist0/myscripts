@@ -1,5 +1,5 @@
 # myscripts
-Inside these files are scripts that were wrote for vertious reasons
+Inside these files are scripts that were wrote for verious reasons
 
 ## 1) auto-iso 
   -This script creates a custom bootable ISO image of Ubuntu by downloading a minimal Ubuntu image, removing unneeded files, adding a 
@@ -10,7 +10,7 @@ Inside these files are scripts that were wrote for vertious reasons
   it opens a Bash session for the user. The user can customize the variables at the top of the script to fit their specific needs, such as ISO_NAME, 
   MOUNT_DIR, ISO_DIR, SCRIPT_NAME, and FILEPATH.
  
- ## spam-filter
+ ## 2) spam-filter
     -This is a shell script that filters emails by moving them to different folders based on certain conditions. Here's what it does:
 
     Changes directory to the /var/mail/ folder.
