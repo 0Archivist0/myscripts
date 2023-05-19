@@ -26,3 +26,8 @@ Inside these files are scripts that were wrote for verious reasons
     If the email is not spam/junk and not in the whitelist, it moves the email to the inbox folder.
     Changes directory back to the mail directory.
     Logs the end time in the log file.
+
+
+## 3) Auto-install-vs-code.sh
+this script, wrote in bash auotmates the install of vs code
+
