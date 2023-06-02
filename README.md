@@ -31,3 +31,5 @@ Inside these files are scripts that were wrote for verious reasons
 ## 3) Auto-install-vs-code.sh
 this script, wrote in bash auotmates the install of vs code
 
+## 4) nic card shutof-on.py
+disconnects and reconnectst the nicard ##### (untested)
