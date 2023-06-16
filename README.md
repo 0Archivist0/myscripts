@@ -1,5 +1,7 @@
 # myscripts
-Inside these files are scripts that were wrote for verious reasons
+Inside these files are scripts that were wrote for verious reasons, 
+I think I ought to change it to somthing reflecting an equivilent of a catch all drawer
+
 
 ## 1) auto-iso 
   -This script creates a custom bootable ISO image of Ubuntu by downloading a minimal Ubuntu image, removing unneeded files, adding a 
