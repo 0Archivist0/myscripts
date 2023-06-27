@@ -3,7 +3,11 @@ Inside these files are scripts that were wrote for verious reasons,
 I think I ought to change it to somthing reflecting an equivilent of a catch all drawer
 
 ### Theses Scripts are wrote for debian based linux distros
-### Use these at your own risk
+but come to think of it there is some other scripts in there to,
+
+( I need to update this more often)
+
+### !!*Use these at your own risk*!!
 
 ## 1)Whats inside??
 these sscripts got wrote,out of who knows why.. but they did...
