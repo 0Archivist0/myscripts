@@ -2,10 +2,7 @@
 Inside these files are scripts that were wrote for verious reasons, 
 I think I ought to change it to somthing reflecting an equivilent of a catch all drawer
 
-### Theses Scripts are wrote for debian based linux distros
-but come to think of it there is some other scripts in there to,
-
-( I need to update this more often)
+### Theses Scripts are wrote for debian based linux distros but there are also some powershell and some python in here to
 
 ### !!*Use these at your own risk*!!
 
